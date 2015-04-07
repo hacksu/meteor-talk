@@ -1,0 +1,30 @@
+<head>
+  <title>Hack</title>
+</head>
+
+<body>
+
+  <h1>Hack</h1>
+
+</body>
+
+<template name="TeamList">
+
+  <h2>Teams</h2>
+
+  <form>
+    <input type="text" name="name" placeholder="Create a new team">
+    <button>Create</button>
+  </form>
+
+  <ul>
+    {{#each teams}}
+      {{> team}}
+    {{/each}}
+  </ul>
+
+</template>
+
+<template name="team">
+  <li><a href="{{name}}">{{name}}</a></li>
+</template>

@@ -1,0 +1,38 @@
+<template name="Team">
+
+  <h2>{{team.name}}</h2>
+
+  <div class="channels">
+    <h3>Channels</h3>
+
+    <form class="new-channel">
+      <input type="text" name="name" placeholder="New channel">
+      <button>Create</button>
+    </form><br>
+
+    {{#each team.channels}}
+      {{> channel}}
+    {{/each}}
+  </div>
+
+  <div class="messages">
+    <h3>Messages</h3>
+    <form class="new-message">
+      <input type="text" name="message" placeholder="Send a new message">
+      <button>Send</button>
+    </form><br>
+
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
+  </div>
+
+</template>
+
+<template name="channel">
+  <li class="channel-name">{{name}}</li>
+</template>
+
+<template name="message">
+  <li>{{text}}</li>
+</template>
