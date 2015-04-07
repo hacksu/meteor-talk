@@ -6,15 +6,26 @@
 
   <body>
     <h1>Teams</h1>
+    {{> createTeam}}
     <ul>
       {{#each teams}}
-        {{> team}}
+        {{> teamListItem}}
       {{/each}}
     </ul>
   </body>
 
 </template>
 
-<template name="team">
+<template name="teamListItem">
   <li><a href="/{{name}}">{{name}}</a></li>
+</template>
+
+<template name="createTeam">
+  <form>
+    <label>
+      Team name:
+      <input type="text" placeholder="Team name" name="name">
+      <button>Create</button>
+    </label>
+  </form>
 </template>

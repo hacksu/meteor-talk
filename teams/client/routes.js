@@ -3,6 +3,5 @@ Router.route('/', function () {
 });
 
 Router.route('/:name', function () {
-  var team = Teams.findOne({name: this.params.name});
-  this.render('Team', {data: team});
+  this.render('TeamSingle');
 });
